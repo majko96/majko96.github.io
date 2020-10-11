@@ -138,13 +138,24 @@
         <div class="divider-custom-line"></div>
       </div>
       <div class="center">
-        <i class="fas fa-envelope mt-4 fa-2x"></i>
-        <h2>mr.babinec@gmail.com</h2>
+        <a class="btn btn-primary btn-lg text-white" onclick="myFunction()">
+          <i class="fas fa-envelope mt-4 fa-2x"></i>
+          <h2>mr.babinec@gmail.com</h2>
+        </a>
       </div>
     </div>
   </section>
+  <input type="text" value="mr.babinec@gmail.com" id="copy">
 
-
+  <script type="text/javascript">
+    function myFunction() {
+      var copyText = document.getElementById("copy");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      alert("Skopírované: " + copyText.value);
+    }
+  </script>
 
 
 
