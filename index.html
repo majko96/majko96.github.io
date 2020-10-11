@@ -116,10 +116,10 @@
       </div>
       <!-- About Section Content-->
       <div class="row">
-        <div class="col-lg-4 ml-auto center">
+        <div class="col-lg-4 ml-auto">
           <p class="lead">Volám sa Mário Babinec a vo voľnom čase sa venujem tvorbe webových stránok. Pri práci používam Html, CSS, javaScript, PHP, MySQL, Ajax, Bootstrap.</p>
         </div>
-        <div class="col-lg-4 mr-auto center">
+        <div class="col-lg-4 mr-auto">
           <p class="lead">Ovládam aj základy Javy - dokážem vytvoriť jednoduché aplikácie v AndroidStudiu. Takisto viem napísať jednoduché scripty v Pythone. Na testovanie webových stránok používam framework Selenium.</p>
         </div>
       </div>
@@ -140,23 +140,12 @@
       <div class="center">
         <a class="btn btn-primary btn-lg text-white" onclick="myFunction()">
           <i class="fas fa-envelope mt-4 fa-2x"></i>
-          <h2>mr.babinec@gmail.com</h2>
+          <p>mr.babinec@gmail.com</p>
         </a>
       </div>
     </div>
   </section>
   <input type="text" value="mr.babinec@gmail.com" id="copy">
-
-  <script type="text/javascript">
-    function myFunction() {
-      var copyText = document.getElementById("copy");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-      alert("Skopírované: " + copyText.value);
-    }
-  </script>
-
 
 
 
@@ -177,5 +166,15 @@
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
 </body>
+
+<script type="text/javascript">
+  function myFunction() {
+    var copyText = document.getElementById("copy");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+    alert("Skopírované: " + copyText.value);
+  }
+</script>
 
 </html>
