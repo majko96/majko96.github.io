@@ -1,0 +1,10 @@
+.center{
+text-align:center;
+vertical-align:central;
+}
+
+.jumbotron{
+  min-height: 380px;
+  max-height: 380px;
+  overflow-y:hidden;
+}
