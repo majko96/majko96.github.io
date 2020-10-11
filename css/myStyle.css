@@ -8,3 +8,7 @@ vertical-align:central;
   max-height: 380px;
   overflow-y:hidden;
 }
+
+body{
+  font-family: Arial, Helvetica, sans-serif; 
+}
