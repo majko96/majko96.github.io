@@ -4,9 +4,10 @@ vertical-align:central;
 }
 
 .jumbotron{
-  min-height: 380px;
-  max-height: 380px;
+  min-height: 320px;
+  max-height: 320px;
   overflow-y:hidden;
+  background-color: #FFAAAA;
 }
 
 body{
@@ -15,4 +16,56 @@ body{
 
 #copy {
     opacity: .01;
+}
+
+.space{
+  margin-bottom: 3rem;
+}
+
+.bg-col{
+  background-color: #AA3939;
+}
+
+.btn-primary{
+  background-color: #AA3939 !important;
+  border: none !important;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+    background: #AA3939;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
+    color: #fff;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+  background: #AA3939;
+}
+
+
+
+li > a:after {
+  background: none repeat scroll 0 0 transparent;
+  content: "";
+  display: block;
+  height: 0.1rem;
+  left: 50%;
+position: relative;
+  background: #AA3939;
+  transition: width 0.6s ease 0s, left 0.6s ease 0s;
+  width: 0;
+}
+
+li > a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+li > a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
 }
