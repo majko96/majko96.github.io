@@ -69,3 +69,13 @@ li > a {
   display: inline-block;
   position: relative;
 }
+
+.vertical{
+  height: 100%;
+  position: absolute;
+  border-left: 2px solid;
+}
+
+#about p{
+  padding-left: 1rem;
+}
