@@ -4,10 +4,12 @@ vertical-align:central;
 }
 
 .jumbotron{
-  min-height: 320px;
-  max-height: 320px;
+  min-height: 280px;
+  max-height: 280px;
   overflow-y:hidden;
   background-color: #FFAAAA;
+  position: relative;
+  padding: 1rem 1rem;
 }
 
 body{
@@ -29,6 +31,16 @@ body{
 .btn-primary{
   background-color: #AA3939 !important;
   border: none !important;
+}
+
+.btn-primary:hover{
+  background-color: #2c3e50 !important;
+  border: none !important;
+}
+
+.btn-primary:focus{
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
@@ -78,4 +90,10 @@ li > a {
 
 #about p{
   padding-left: 1rem;
+}
+
+.jb-btn{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
