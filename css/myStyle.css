@@ -86,14 +86,29 @@ li > a {
   height: 100%;
   position: absolute;
   border-left: 2px solid;
+  left: 1rem;
 }
 
 #about p{
   padding-left: 1rem;
+
 }
 
 .jb-btn{
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+  min-width: 5rem;
+}
+
+.jb-btnL{
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  min-width: 5rem;
+}
+
+#outer{
+  display: flex;
+  align-items: center;
 }
