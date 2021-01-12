@@ -1,80 +1,85 @@
-.center{
-text-align:center;
-vertical-align:central;
+.center {
+  text-align: center;
+  vertical-align: central;
 }
 
-.jumbotron{
+.jumbotron {
   min-height: 280px;
   max-height: 280px;
-  overflow-y:hidden;
+  overflow-y: hidden;
   background-color: #FFAAAA;
   position: relative;
   padding: 1rem 1rem;
+  box-shadow: 3px 3px 3px grey;
+  transition: .5s;
 }
 
-body{
+.jumbotron:hover {
+  transform: scale(1.05);
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #copy {
-    opacity: .01;
+  opacity: .01;
 }
 
-.space{
+.space {
   margin-bottom: 3rem;
 }
 
-.bg-col{
+.bg-col {
   background-color: #AA3939;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: #AA3939 !important;
   border: none !important;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: #2c3e50 !important;
   border: none !important;
+  box-shadow: 3px 3px 3px black;
 }
 
-.btn-primary:focus{
+.btn-primary:focus {
   outline: none !important;
   box-shadow: none !important;
 }
 
-#mainNav .navbar-nav > li.nav-item > a.nav-link.active {
-    background: #AA3939;
-}
-
-#mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
-    color: #fff;
-}
-
-#mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+#mainNav .navbar-nav>li.nav-item>a.nav-link.active {
   background: #AA3939;
 }
 
+#mainNav .navbar-nav>li.nav-item>a.nav-link:hover {
+  color: #fff;
+}
 
+#mainNav .navbar-nav>li.nav-item>a.nav-link.active:active, #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus, #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
+  background: #AA3939;
+}
 
-li > a:after {
+li>a:after {
   background: none repeat scroll 0 0 transparent;
   content: "";
   display: block;
   height: 0.1rem;
   left: 50%;
-position: relative;
+  position: relative;
   background: #AA3939;
   transition: width 0.6s ease 0s, left 0.6s ease 0s;
   width: 0;
 }
 
-li > a:hover:after {
+li>a:hover:after {
   width: 100%;
   left: 0;
 }
 
-li > a {
+li>a {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -82,33 +87,34 @@ li > a {
   position: relative;
 }
 
-.vertical{
+.vertical {
   height: 100%;
   position: absolute;
   border-left: 2px solid;
   left: 1rem;
 }
 
-#about p{
+#about p {
   padding-left: 1rem;
-
 }
 
-.jb-btn{
+.jb-btn {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
   min-width: 5rem;
+  box-shadow: 3px 3px 3px grey;
 }
 
-.jb-btnL{
+.jb-btnL {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
   min-width: 5rem;
+  box-shadow: 3px 3px 3px grey;
 }
 
-#outer{
+#outer {
   display: flex;
   align-items: center;
 }
