@@ -126,3 +126,12 @@ li>a {
   display: flex;
   align-items: center;
 }
+
+.icon{
+  margin: 15px;
+  color: #fff;
+}
+
+.icon:hover{
+  color: #fff;
+}
