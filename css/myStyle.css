@@ -135,3 +135,7 @@ li>a {
 .icon:hover {
   color: #fff;
 }
+
+.btn {
+  box-shadow: 3px 3px 3px grey;
+}
