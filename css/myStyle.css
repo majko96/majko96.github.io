@@ -118,3 +118,7 @@ li>a {
   display: flex;
   align-items: center;
 }
+
+.btn {
+  box-shadow: 3px 3px 3px grey;
+}
