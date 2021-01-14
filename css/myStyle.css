@@ -12,6 +12,7 @@
   padding: 1rem 1rem;
   box-shadow: 3px 3px 3px grey;
   transition: .5s;
+  border-radius: 0rem !important;
 }
 
 .jumbotron:hover {
@@ -20,6 +21,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: lightblue;
 }
 
 #copy {
@@ -42,6 +44,7 @@ body {
 .btn-primary:hover {
   background-color: #2c3e50 !important;
   border: none !important;
+  border-radius: 0rem !important;
   box-shadow: 3px 3px 3px black;
 }
 
@@ -68,18 +71,6 @@ body {
 
 #mainNav .navbar-nav li {
   text-align: center;
-}
-
-li>a:after {
-  background: none repeat scroll 0 0 transparent;
-  content: "";
-  display: block;
-  height: 0.1rem;
-  left: 50%;
-  position: relative;
-  background: #AA3939;
-  transition: width 0.6s ease 0s, left 0.6s ease 0s;
-  width: 0;
 }
 
 li>a:hover:after {
@@ -138,4 +129,20 @@ li>a {
 
 .btn {
   box-shadow: 3px 3px 3px grey;
+  border-radius: 0rem !important;
+  transition: 0.5s;
+}
+
+@media only screen and (min-width: 600px) {
+  li>a:after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 0.1rem;
+    left: 50%;
+    position: relative;
+    background: #AA3939;
+    transition: 0.6s ease 0s, left 0.6s ease 0s;
+    width: 0;
+  }
 }
