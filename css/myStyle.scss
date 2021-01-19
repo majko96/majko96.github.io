@@ -1,3 +1,4 @@
+$main-col: #AA3939;
 .center {
   text-align: center;
   vertical-align: middle;
@@ -68,11 +69,13 @@ body {
 }
 
 .space {
+
+  
   margin-bottom: 3rem;
 }
 
 .bg-col {
-  background-color: #AA3939;
+  background-color: $main-col;
 }
 
 .btn-primary {
@@ -160,15 +163,11 @@ li>a {
 }
 
 .icon {
-  transition: top ease 0.5s;
-  position: relative;
-  top: 0;
   margin: 15px;
   color: #fff;
 }
 
 .icon:hover {
-  top: -10px;
   color: #fff;
 }
 
@@ -260,15 +259,3 @@ li>a {
 .boot-color {
   color: #563d7c !important;
 }
-
-#contact a {
-  position: relative;
-  top: 0;
-  transition: top ease 0.5s;
-}
-
-#contact a:hover {
-  top: -10px;
-}
-
-/*# sourceMappingURL=myStyle.css.map */
