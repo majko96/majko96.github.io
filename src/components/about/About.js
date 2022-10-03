@@ -4,12 +4,12 @@ import Terminal from "./Terminal";
 import {Box} from "@mui/material";
 
 
-export default function About() {
+export default function About(props) {
 
    function aboutMeText() {
       return <>
-         <p><span className={Style.pink}>mario $</span> cat aboutmario </p>
-         <p><span className={Style.pink}>aboutmario <span
+         <p><span className={Style.green}>mario $</span> cat aboutmario </p>
+         <p><span className={Style.green}>aboutmario <span
              className={Style.green}>(main)</span> $</span></p>
          <p>
             Hello! I'm Mario a fullstack web developer from Povazska Bystrica.
@@ -22,10 +22,10 @@ export default function About() {
 
    function skillsText() {
       return <>
-         <p><span className={Style.pink}>mario $</span> cd skills/tools</p>
-         <p><span className={Style.pink}>skills/tools <span
+         <p><span className={Style.green}>mario $</span> cd skills/tools</p>
+         <p><span className={Style.green}>skills/tools <span
             className={Style.green}>(main)</span> $</span> ls</p>
-         <p className={Style.pink}> Proficient With</p>
+         <p> Proficient With</p>
          <ul className={Style.skills}>
             <li>PHP</li>
             <li>JavaScript</li>
@@ -49,8 +49,8 @@ export default function About() {
 
    function miscText() {
       return <>
-         <p><span className={Style.pink}>mario $</span> cd hobbies</p>
-         <p><span className={Style.pink}>hobbies<span
+         <p><span className={Style.green}>mario $</span> cd hobbies</p>
+         <p><span className={Style.green}>hobbies<span
             className={Style.green}> (main)</span> $</span> ls</p>
          <ul>
             <li><Box component={'span'} mr={'1rem'}>💻</Box>programming</li>
@@ -62,9 +62,9 @@ export default function About() {
 
    return (
       <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'}>
-         <Terminal text={aboutMeText()}/>
-         <Terminal text={skillsText()}/>
-         <Terminal text={miscText()}/>
+         <Terminal text={aboutMeText()} isDarkMode={props.isDarkMode}/>
+         <Terminal text={skillsText()} isDarkMode={props.isDarkMode}/>
+         <Terminal text={miscText()} isDarkMode={props.isDarkMode}/>
       </Box>
    )
 }

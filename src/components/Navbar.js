@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import Style from './Navbar.module.scss';
 import Toggler from "./home/Toggler";
 import {Link, useLocation} from "react-router-dom";
-import {Box} from "@mui/material";
+import {Box, Button, Drawer, ListItem} from "@mui/material";
+import {ReactComponent as Menu} from '../img/Hamburger_icon.svg'
 
 const links = [
    {
@@ -26,9 +27,48 @@ export default function Navbar({darkMode, handleClick}) {
    const location = useLocation()
    const [active, setActive] = useState(location.pathname === '/' ? 'home' : location.pathname.slice(1, location.pathname.length));
 
+   const [state, setState] = React.useState(false);
+
+   const toggleDrawer = () => (event) => {
+      if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+         return;
+      }
+
+      setState(!state);
+   };
+
+   const list = () => (
+       <div
+           role="presentation"
+           onClick={toggleDrawer(false)}
+           onKeyDown={toggleDrawer(false)}
+       >
+          <Box textAlign={'center'} p={'1rem'}>
+             {links.map((link, index) => (
+                 <ListItem key={index} style={{display:'flex', justifyContent:'center'}}>
+                    <Link to={link.to}>
+                       {link.name && <p style={{paddingBottom: '0.5rem', fontSize: '1.3rem' }}>{link.name}</p>}
+                    </Link>
+                 </ListItem>
+             ))}
+             <ListItem style={{display:'flex', justifyContent:'center'}}>
+                <Toggler darkMode={darkMode} handleClick={handleClick}/>
+             </ListItem>
+          </Box>
+       </div>
+   );
+
    return (
       <Box component={'nav'} width={'100%'}>
-         <Box component={'ul'} display={'flex'} justifyContent={'center'} alignItems={'center'}
+         <Box className={Style.menuIconColor} component={'ul'} display={{ xs: "block", md: "none" }} textAlign={'right'}>
+            <li>
+               <Button onClick={toggleDrawer(true)}><Menu/></Button>
+               <Drawer anchor={'bottom'} open={state} onClose={toggleDrawer(false)} classes={{ paper: Style.borderDrawer }}>
+                  {list()}
+               </Drawer>
+            </li>
+         </Box>
+         <Box component={'ul'} display={{ xs: "none", md: "flex" }} justifyContent={'center'} alignItems={'center'}
               gap={{xs: '2rem', md: '8rem'}}
               textTransform={'lowercase'} fontSize={'1rem'}>
             {links.map((link, index) => (

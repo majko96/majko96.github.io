@@ -19,11 +19,24 @@ i {
 .terminal {
   p, li {
     margin: 0;
-    color: $white;
   }
   p, ul {
     margin-top: 20px;
   }
+}
+
+.light {
+  background-color: $white;
+  color: $dark;
+  transition: all 400ms;
+  border: 1px solid #8c8c8c;
+}
+
+.dark {
+  background-color: rgb(39, 36, 47);
+  color: $white;
+  transition: all 400ms;
+  border: 1px solid $dark;
 }
 
 @keyframes changeColors {

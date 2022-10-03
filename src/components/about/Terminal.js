@@ -9,7 +9,7 @@ function Terminal(props) {
    const {text} = props;
 
    return (
-      <Box component={'section'} className={classNames(Style.terminal, Style.shadowed)}
+      <Box component={'section'} className={classNames(Style.terminal, props.isDarkMode ? Style.dark : Style.light)}
            width={{xs: '95%', md: '50%'}} borderRadius={'0.5rem'} mb={'4rem'}>
          <Box sx={{backgroundColor: '#8c8c8c'}} p={'0.5rem'} borderRadius={'0.5rem 0.5rem 0 0'}
               fontSize={'1rem'}>
@@ -18,7 +18,7 @@ function Terminal(props) {
             <i className={classNames(iconClass, Style.green)}/>
          </Box>
          <Box py={{xs: '1rem', md: '2rem'}} px={{xs: '2rem', md: '3rem'}} borderRadius={'0 0 0.5rem 0.5rem'}
-              sx={{backgroundColor: '#27242f'}} fontSize={'1.5rem'} fontFamily={'Courier New, Courier, monospace'}>
+              className={props.isDarkMode ? Style.dark : Style.light} fontSize={'1.5rem'} fontFamily={'Courier New, Courier, monospace'}>
             {text}
          </Box>
       </Box>
