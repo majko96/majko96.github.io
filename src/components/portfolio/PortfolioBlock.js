@@ -1,26 +1,34 @@
 import React from 'react';
-import IconLink from "./IconLink";
-import {Box} from "@mui/material";
+import Style from "../about/About.module.scss";
+import Terminal from "../about/Terminal";
 
 function PortfolioBlock(props) {
-    const {image, live, source, title} = props;
+    const {name, url, desc, tech, source, isDarkMode} = props;
+    const renderItemText = () => {
+        return (
+            <>
+                <p><span className={Style.green}>mario $</span> cat projects/{name}</p>
+                    <ul className={Style.contact}>
+                        <li>
+                            <a href={url} target={'_blank'}>url: 🔗 {name}</a>
+                        </li>
+                        <li>
+                            desc: 📚 {desc}
+                        </li>
+                        <li>
+                            tech: ✅ {tech}
+                        </li>
+                        <li>
+                            <a href={source} target={'_blank'}>source: 🔗 GitHub</a>
+                        </li>
+                    </ul>
+            </>
+        )
+    }
+
     return (
-        <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
-            <Box component={'img'} src={image} alt={'mockup'}/>
-            <h1 style={{fontSize: '2rem'}}>{title}</h1>
-            <Box className={'portfolio'} display={'flex'} flexDirection={'column'} gap={'0.5rem'}
-                 alignItems={'center'} fontSize={'1.5rem'} py={'2rem'}>
-                {live &&
-                    <Box p={1} border={'2px solid black'} borderRadius={'25px'}>
-                        <IconLink link={live} title={'Live Demo'} icon={'fa fa-safari'}/>
-                    </Box>}
-                {source &&
-                    <Box p={1} border={'2px solid black'} borderRadius={'25px'}>
-                        <IconLink link={source} title={'Source Code'} icon={'fa fa-code'}/>
-                    </Box>}
-            </Box>
-        </Box>
-    );
+        <Terminal text={renderItemText()} isDarkMode={isDarkMode}/>
+    )
 }
 
 export default PortfolioBlock;

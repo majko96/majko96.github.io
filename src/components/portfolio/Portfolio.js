@@ -1,32 +1,67 @@
 import React from 'react';
+import {Box} from "@mui/material";
 import PortfolioBlock from "./PortfolioBlock";
-import {Box, Grid} from "@mui/material";
 
 const projects = [
     {
-        image: null,
-        live: "https://jarell.sk/",
-        source: "https://github.com/majko96",
-        title: "jarell.sk"
+        name: 'jarell.sk',
+        url: 'https://jarell.sk',
+        desc: 'landing page',
+        tech: 'PHP, javaScript, Bootstrap, jQuery',
+        source: 'https://github.com'
     },
+    {
+        name: 'moj-dennik.eu',
+        url: 'https://moj-dennik.eu',
+        desc: 'project to learn PHP and MySQL',
+        tech: 'PHP, javaScript, Bootstrap, jQuery, MySQL',
+        source: 'https://github.com'
+    },
+    {
+        name: 'Poslouchej radia - LMS',
+        url: 'https://github.com/majko96/LMS-Poslouchej-radia',
+        desc: 'project to learn basics Perl',
+        tech: 'Perl, API requests',
+        source: 'https://github.com/majko96/LMS-Poslouchej-radia'
+    },
+    {
+        name: 'Poslouchej radia - Kodi',
+        url: 'https://github.com/majko96/LMS-Poslouchej-radia',
+        desc: 'project to learn basics Python',
+        tech: 'Python, XbmcSwift2',
+        source: 'https://github.com/Mebox/plugin.audio.poslouchej.radia'
+    },
+    {
+        name: 'Poslouchej radia - Admin Panel',
+        url: 'https://moj-dennik.eu/radia',
+        desc: 'admin panel for management radio stations list',
+        tech: 'PHP, javaScript, Bootstrap, MySQL, Codeigniter',
+        source: 'https://github.com/Mebox/plugin.audio.poslouchej.radia'
+    },
+    {
+        name: 'Covid-19-SK - Android project',
+        url: 'https://github.com/majko96/covid-19-sk/releases/download/6.0/app-debug.apk',
+        desc: 'project to learn basics of Android development',
+        tech: 'Java',
+        source: 'https://github.com/majko96/covid-19-sk'
+    }
 ]
 
-export default function Portfolio() {
-    // return (
-    //     <Box>
-    //         <Grid container display={'flex'} justifyContent={'center'}>
-    //             {projects.map((project, index) => (
-    //                <Grid item xs={12} md={6} key={index}>
-    //                    <PortfolioBlock image={project.image} live={project.live} source={project.source} title={project.title} />
-    //                </Grid>
-    //             ))}
-    //         </Grid>
-    //     </Box>
-    // );
+export default function Portfolio(props) {
+
     return (
-        <Box component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
-             justifyContent={'center'} minHeight={'calc(100vh - 175px)'}>
-            under construction...
+        <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'} mb={'0'}>
+            {projects.map((projects, index) => (
+                <PortfolioBlock
+                    key={index}
+                    name={projects.name}
+                    url={projects.url}
+                    desc={projects.desc}
+                    tech={projects.tech}
+                    source={projects.source}
+                    isDarkMode={props.isDarkMode}
+                />
+            ))}
         </Box>
     );
 };

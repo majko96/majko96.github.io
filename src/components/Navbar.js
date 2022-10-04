@@ -20,6 +20,11 @@ const links = [
       name: 'Portfolio',
       to: '/portfolio',
       active: 'portfolio'
+   },
+   {
+      name: 'Contact',
+      to: '/contact',
+      active: 'contact'
    }
 ]
 
@@ -60,7 +65,7 @@ export default function Navbar({darkMode, handleClick}) {
 
    return (
       <Box component={'nav'} width={'100%'}>
-         <Box className={Style.menuIconColor} component={'ul'} display={{ xs: "block", md: "none" }} textAlign={'right'}>
+         <Box className={darkMode ? Style.menuIconColorDark : Style.menuIconColorLight} component={'ul'} display={{ xs: "block", md: "none" }} textAlign={'right'}>
             <li>
                <Button onClick={toggleDrawer(true)}><Menu/></Button>
                <Drawer anchor={'bottom'} open={state} onClose={toggleDrawer(false)} classes={{ paper: Style.borderDrawer }}>
