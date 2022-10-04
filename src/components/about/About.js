@@ -23,7 +23,7 @@ export default function About(props) {
          <p><span className={Style.green}>mario@mbpc:~$</span> cd skills/tools && ls</p>
          <ul className={Style.skills}>
             <li>PHP</li>
-            <li>JavaScript</li>
+            <li>TypeScript</li>
             <li>HTML5</li>
             <li>CSS3</li>
             <li>React</li>
