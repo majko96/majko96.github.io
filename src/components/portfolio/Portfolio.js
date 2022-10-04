@@ -4,6 +4,34 @@ import PortfolioBlock from "./PortfolioBlock";
 
 const projects = [
     {
+        name: 'app.trhovereporty.sk',
+        url: 'https://app.trhovereporty.sk',
+        desc: 'spa react - real estate index data',
+        tech: 'React, Mui',
+        source: null
+    },
+    {
+        name: 'smartweby.sk',
+        url: 'https://smartweby.sk',
+        desc: 'landing page',
+        tech: 'Symfony, React, Bootstrap',
+        source: null
+    },
+    {
+        name: 'smartweby-cms',
+        url: 'https://allperfectreality.sk',
+        desc: 'cms for real estates',
+        tech: 'Symfony, React, Bootstrap, microservice',
+        source: null
+    },
+    {
+        name: 'trhovereporty.sk',
+        url: 'https://trhovereporty.sk',
+        desc: 'landing page',
+        tech: 'React, Mui',
+        source: null
+    },
+    {
         name: 'jarell.sk',
         url: 'https://jarell.sk',
         desc: 'landing page',

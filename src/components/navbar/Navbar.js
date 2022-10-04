@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import Style from './Navbar.module.scss';
-import Toggler from "./home/Toggler";
+import Toggler from "./Toggler";
 import {Link, useLocation} from "react-router-dom";
 import {Box, Button, Drawer, ListItem} from "@mui/material";
-import {ReactComponent as Menu} from '../img/Hamburger_icon.svg'
+import {ReactComponent as Menu} from '../../img/Menu.svg'
+import Favicon from '../../img/favicon.png';
 
 const links = [
    {
@@ -20,6 +21,11 @@ const links = [
       name: 'Portfolio',
       to: '/portfolio',
       active: 'portfolio'
+   },
+   {
+      name: 'CV',
+      to: '/cv',
+      active: 'cv'
    },
    {
       name: 'Contact',
@@ -65,15 +71,13 @@ export default function Navbar({darkMode, handleClick}) {
 
    return (
       <Box component={'nav'} width={'100%'}>
-         <Box className={darkMode ? Style.menuIconColorDark : Style.menuIconColorLight} component={'ul'} display={{ xs: "block", md: "none" }} textAlign={'right'}>
-            <li>
+         <Box className={darkMode ? Style.menuIconColorDark : Style.menuIconColorLight} display={{ xs: "block", md: "none" }} textAlign={'right'}>
                <Button onClick={toggleDrawer(true)}><Menu/></Button>
                <Drawer anchor={'bottom'} open={state} onClose={toggleDrawer(false)} classes={{ paper: Style.borderDrawer }}>
                   {list()}
                </Drawer>
-            </li>
          </Box>
-         <Box component={'ul'} display={{ xs: "none", md: "flex" }} justifyContent={'center'} alignItems={'center'}
+         <Box component={'ul'} display={{ xs: "none", lg: "flex" }} justifyContent={'center'} alignItems={'center'}
               gap={{xs: '2rem', md: '8rem'}}
               textTransform={'lowercase'} fontSize={'1rem'}>
             {links.map((link, index) => (

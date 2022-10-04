@@ -4,25 +4,16 @@ import Terminal from "../about/Terminal";
 import Style from "../about/About.module.scss";
 
 
-export default function Contact(props) {
+export default function Cv(props) {
 
     function contactMeText() {
         return <>
-            <p><span className={Style.green}>mario@mbpc:~$</span> cat contact</p>
-                <ul className={Style.contact}>
+            <p><span className={Style.green}>mario@mbpc:~$</span> download mario-cv</p>
+            <ul className={Style.contact}>
                 <li>
-                    👦 Mario Babinec
+                    <a href="#">💾 for download Mario's CV click here!</a>
                 </li>
-                <li>
-                    🏠 Povazska Bystrica
-                </li>
-                <li>
-                    🇸🇰 Slovakia
-                </li>
-                <li>
-                    <a href="mailto:mr.babinec@gmail.com">📮 ️mr.babinec@gmail.com</a>
-                </li>
-                </ul>
+            </ul>
         </>;
     }
 

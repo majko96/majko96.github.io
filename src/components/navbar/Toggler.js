@@ -9,14 +9,14 @@ export default function Toggler({darkMode, handleClick}) {
             darkMode ?
                <span>
                    <label className="switch">
-                    <input type="checkbox" checked={!darkMode}/>
+                    <input type="checkbox" checked={!darkMode} readOnly={true}/>
                     <span onClick={handleClick} className="slider round"></span>
                    </label>
                </span>
                :
                <span>
                    <label className="switch">
-                    <input type="checkbox" checked={!darkMode}/>
+                    <input type="checkbox" checked={!darkMode} readOnly={true}/>
                     <span onClick={handleClick} className="slider round"></span>
                    </label>
                </span>

@@ -8,9 +8,7 @@ export default function About(props) {
 
    function aboutMeText() {
       return <>
-         <p><span className={Style.green}>mario $</span> cat aboutmario </p>
-         <p><span className={Style.green}>aboutmario <span
-             className={Style.green}>(main)</span> $</span></p>
+         <p><span className={Style.green}>mario@mbpc:~$</span> cat about-mario </p>
          <p>
             Hello! I'm Mario a fullstack web developer from Povazska Bystrica.
             I love creating web applications with React and PHP.
@@ -22,10 +20,7 @@ export default function About(props) {
 
    function skillsText() {
       return <>
-         <p><span className={Style.green}>mario $</span> cd skills/tools</p>
-         <p><span className={Style.green}>skills/tools <span
-            className={Style.green}>(main)</span> $</span> ls</p>
-         <p> Proficient With</p>
+         <p><span className={Style.green}>mario@mbpc:~$</span> cd skills/tools && ls</p>
          <ul className={Style.skills}>
             <li>PHP</li>
             <li>JavaScript</li>
@@ -49,13 +44,11 @@ export default function About(props) {
 
    function miscText() {
       return <>
-         <p><span className={Style.green}>mario $</span> cd hobbies</p>
-         <p><span className={Style.green}>hobbies<span
-            className={Style.green}> (main)</span> $</span> ls</p>
-         <ul>
-            <li><Box component={'span'} mr={'1rem'}>💻</Box>programming</li>
-            <li><Box component={'span'} mr={'1rem'}>📖</Box>reading</li>
-            <li><Box component={'span'} mr={'1rem'}>🎥</Box>movies</li>
+         <p><span className={Style.green}>mario@mbpc:~$</span> cd hobbies && ls</p>
+         <ul className={Style.contact}>
+            <li>💻 programming</li>
+            <li>📖 reading</li>
+            <li>🎥 movies</li>
          </ul>
       </>;
    }

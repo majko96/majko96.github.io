@@ -7,7 +7,7 @@ function PortfolioBlock(props) {
     const renderItemText = () => {
         return (
             <>
-                <p><span className={Style.green}>mario $</span> cat projects/{name}</p>
+                <p><span className={Style.green}>mario@mbpc:~$</span> cat {name}</p>
                     <ul className={Style.contact}>
                         <li>
                             <a href={url} target={'_blank'}>url: 🔗 {name}</a>
@@ -19,7 +19,9 @@ function PortfolioBlock(props) {
                             tech: ✅ {tech}
                         </li>
                         <li>
-                            <a href={source} target={'_blank'}>source: 🔗 GitHub</a>
+                            {
+                                source && <a href={source} target={'_blank'}>source: 🔗 GitHub</a>
+                            }
                         </li>
                     </ul>
             </>

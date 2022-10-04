@@ -1,9 +1,10 @@
-@import "../variables.modules";
+@import "../../variables.modules";
 
 nav {
   transition: $transition;
   a {
     color: #000;
+    text-transform: capitalize;
   }
 }
 
