@@ -4,7 +4,6 @@ import Toggler from "./Toggler";
 import {Link, useLocation} from "react-router-dom";
 import {Box, Button, Drawer, ListItem} from "@mui/material";
 import {ReactComponent as Menu} from '../../img/Menu.svg'
-import Favicon from '../../img/favicon.png';
 
 const links = [
    {
