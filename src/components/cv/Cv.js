@@ -11,7 +11,7 @@ export default function Cv(props) {
             <p><span className={Style.green}>mario@mbpc:~$</span> download mario-cv</p>
             <ul className={Style.contact}>
                 <li>
-                    <a href="#">💾 for download Mario's CV click here!</a>
+                    <a href="https://majko96.github.io/cv/babinec-cv.pdf">💾 mario-babinec-cv.pdf</a>
                 </li>
             </ul>
         </>;
