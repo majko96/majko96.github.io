@@ -4,7 +4,7 @@ import Navbar from "./navbar/Navbar";
 import Home from "./home/Home";
 import About from "./about/About";
 import Portfolio from "./portfolio/Portfolio";
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import {Box, Grid} from "@mui/material";
 import Contact from "./contact/Contact";
 import Cv from "./cv/Cv";
@@ -41,6 +41,7 @@ export default function BaseLayout() {
                   <Route exact path={'/portfolio'} element={<Portfolio isDarkMode={darkMode}/>}/>
                   <Route exact path={'/cv'} element={<Cv isDarkMode={darkMode}/>}/>
                   <Route exact path={'/contact'} element={<Contact isDarkMode={darkMode}/>}/>
+                  <Route path={'*'} element={<Navigate to={'/'}/>}/>
                </Routes>
             </Grid>
             <Grid item>
