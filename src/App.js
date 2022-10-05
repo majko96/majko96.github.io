@@ -3,15 +3,12 @@ import './App.module.scss';
 import BaseLayout from "./components/BaseLayout";
 import {HashRouter} from 'react-router-dom'
 
-function App() {
+export default function App() {
    return (
       <div>
          <HashRouter>
-            <BaseLayout/>
+            <BaseLayout appMode={JSON.parse(localStorage.getItem('darkMode'))}/>
          </HashRouter>
       </div>
    );
 }
-
-
-export default App;

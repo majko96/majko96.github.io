@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Style from './BaseLayout.module.scss'
 import Navbar from "./navbar/Navbar";
 import Home from "./home/Home";
@@ -9,18 +9,9 @@ import {Box, Grid} from "@mui/material";
 import Contact from "./contact/Contact";
 import Cv from "./cv/Cv";
 
-export default function BaseLayout() {
-   let [darkMode, setDarkMode] = useState(false);
+export default function BaseLayout(props) {
+   let [darkMode, setDarkMode] = useState(props.appMode);
    const actualYear = new Date().getFullYear();
-
-   useEffect(() => {
-      const mode = localStorage.getItem('darkMode');
-      if (mode) {
-         setDarkMode(JSON.parse(mode));
-      } else {
-         setDarkMode(true);
-      }
-   }, []);
 
    function handleClick() {
       setDarkMode(!darkMode);
