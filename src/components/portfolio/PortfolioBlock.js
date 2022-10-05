@@ -10,7 +10,7 @@ function PortfolioBlock(props) {
                 <p><span className={Style.green}>mario@mbpc:~$</span> cat {name}</p>
                     <ul className={Style.contact}>
                         <li>
-                            <a href={url} target={'_blank'}>url: 🔗 {name}</a>
+                            <a href={url} target={'_blank'} rel={'noreferrer'}>url: 🔗 {name}</a>
                         </li>
                         <li>
                             desc: 📚 {desc}
@@ -20,7 +20,7 @@ function PortfolioBlock(props) {
                         </li>
                         <li>
                             {
-                                source && <a href={source} target={'_blank'}>source: 🔗 GitHub</a>
+                                source && <a href={source} target={'_blank'} rel={'noreferrer'}>source: 🔗 GitHub</a>
                             }
                         </li>
                     </ul>
