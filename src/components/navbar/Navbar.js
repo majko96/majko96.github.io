@@ -70,7 +70,7 @@ export default function Navbar({darkMode, handleClick}) {
 
    return (
       <Box component={'nav'} width={'100%'}>
-         <Box className={darkMode ? Style.menuIconColorDark : Style.menuIconColorLight} display={{ xs: "block", md: "none" }} textAlign={'right'}>
+         <Box className={darkMode ? Style.menuIconColorDark : Style.menuIconColorLight} display={{ xs: "block", lg: "none" }} textAlign={'right'}>
                <Button name={'menu'} onClick={toggleDrawer(true)}><Menu/></Button>
                <Drawer anchor={'bottom'} open={state} onClose={toggleDrawer(false)} classes={{ paper: Style.borderDrawer }}>
                   {list()}
