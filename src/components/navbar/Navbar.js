@@ -10,12 +10,14 @@ const useStyles = makeStyles({
    paperLight: {
       borderRadius: '30px 30px 0 0',
       background: 'white',
-      color: 'black'
+      color: 'black',
+      borderTop: '5px solid #cecece'
    },
    paperDark: {
       borderRadius: '30px 30px 0 0',
       background: '#1f1f1f',
-      color: 'white'
+      color: 'white',
+      borderTop: '5px solid #424242'
    }
 });
 
