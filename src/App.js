@@ -7,7 +7,7 @@ export default function App() {
    return (
       <div>
          <HashRouter>
-            <BaseLayout appMode={JSON.parse(localStorage.getItem('darkMode'))}/>
+            <BaseLayout appMode={JSON.parse(localStorage.getItem('darkMode')) ?? true}/>
          </HashRouter>
       </div>
    );
