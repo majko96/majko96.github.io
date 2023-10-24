@@ -61,10 +61,10 @@ const projects = [
     },
     {
         name: 'Poslouchej radia - Admin Panel',
-        url: 'https://moj-dennik.eu/radia',
+        url: 'https://radia.moj-dennik.eu/',
         desc: 'admin panel for management radio stations list',
-        tech: 'PHP, javaScript, Bootstrap, MySQL, Codeigniter',
-        source: 'https://github.com/Mebox/plugin.audio.poslouchej.radia'
+        tech: 'PHP, javaScript, Bootstrap, MySQL, Symfony',
+        source: 'personal'
     },
     {
         name: 'Covid-19-SK - Android project',

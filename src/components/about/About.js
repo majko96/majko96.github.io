@@ -27,7 +27,7 @@ export default function About(props) {
             <li>HTML5</li>
             <li>CSS3</li>
             <li>React</li>
-            <li>Symphony</li>
+            <li>Symfony</li>
             <li>Bootstrap</li>
             <li>Material UI</li>
             <li>Sass</li>

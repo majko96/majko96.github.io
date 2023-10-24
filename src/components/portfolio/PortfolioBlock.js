@@ -4,6 +4,23 @@ import Terminal from "../about/Terminal";
 
 function PortfolioBlock(props) {
     const {name, url, desc, tech, source, isDarkMode} = props;
+
+    const renderSource = () => {
+        if (props.source === 'personal') {
+            return (
+                <>
+                    source: contact me
+                </>
+            )
+        }
+        return (
+            <>
+                {
+                    source && <a href={source} target={'_blank'} rel={'noreferrer'}>source: 🔗 GitHub</a>
+                }
+            </>
+        )
+    }
     const renderItemText = () => {
         return (
             <>
@@ -19,9 +36,7 @@ function PortfolioBlock(props) {
                             tech: ✅ {tech}
                         </li>
                         <li>
-                            {
-                                source && <a href={source} target={'_blank'} rel={'noreferrer'}>source: 🔗 GitHub</a>
-                            }
+                            {renderSource()}
                         </li>
                     </ul>
             </>
