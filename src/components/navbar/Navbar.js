@@ -38,6 +38,11 @@ const links = [
       active: 'portfolio'
    },
    {
+      name: 'Experience',
+      to: '/experience',
+      active: 'experience'
+   },
+   {
       name: 'CV',
       to: '/cv',
       active: 'cv'

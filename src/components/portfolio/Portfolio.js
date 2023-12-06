@@ -21,7 +21,7 @@ const projects = [
         name: 'poslouchej-radia-admin-panel',
         url: 'https://radia.moj-dennik.eu',
         desc: 'Admin panel for management radio stations list for my KODI app',
-        tech: 'Symfony, React, Bootstrap, MySQL',
+        tech: 'Symfony, jQuery, Bootstrap, MySQL',
         source: null
     },
     {

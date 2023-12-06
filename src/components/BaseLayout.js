@@ -8,6 +8,7 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import {Box, Grid} from "@mui/material";
 import Contact from "./contact/Contact";
 import Cv from "./cv/Cv";
+import Experience from "./experience/Experience";
 
 export default function BaseLayout(props) {
    let [darkMode, setDarkMode] = useState(props.appMode);
@@ -30,6 +31,7 @@ export default function BaseLayout(props) {
                   <Route exact path={'/'} element={<Home/>}/>
                   <Route exact path={'/about'} element={<About isDarkMode={darkMode}/>}/>
                   <Route exact path={'/portfolio'} element={<Portfolio isDarkMode={darkMode}/>}/>
+                  <Route exact path={'/experience'} element={<Experience isDarkMode={darkMode}/>}/>
                   <Route exact path={'/cv'} element={<Cv isDarkMode={darkMode}/>}/>
                   <Route exact path={'/contact'} element={<Contact isDarkMode={darkMode}/>}/>
                   <Route path={'*'} element={<Navigate to={'/'}/>}/>
