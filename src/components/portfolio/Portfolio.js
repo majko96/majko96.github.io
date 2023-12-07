@@ -22,7 +22,7 @@ const projects = [
         url: 'https://radia.moj-dennik.eu',
         desc: 'Admin panel for management radio stations list for my KODI app',
         tech: 'Symfony, jQuery, Bootstrap, MySQL',
-        source: null
+        source: 'https://github.com/majko96/radia-admin'
     },
     {
         name: 'poslouchej-radia-lms-app',
