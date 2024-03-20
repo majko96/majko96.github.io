@@ -4,6 +4,13 @@ import PortfolioBlock from "./PortfolioBlock";
 
 const projects = [
     {
+        name: 'interstol',
+        url: 'https://interstol.sk',
+        desc: 'Carpentry website',
+        tech: 'Symfony, React, Bootstrap',
+        source: null
+    },
+    {
         name: 'whack-it!',
         url: 'https://whackit.eu',
         desc: 'Personal Laravel project',
