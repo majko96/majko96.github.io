@@ -8,7 +8,7 @@ const projects = [
         url: 'https://interstol.sk',
         desc: 'Carpentry website',
         tech: 'Symfony, React, Bootstrap',
-        source: null
+        source: 'https://github.com/majko96/interstol.sk'
     },
     {
         name: 'whack-it!',
