@@ -15,7 +15,9 @@ const projects = [
         url: 'https://whackit.eu',
         desc: 'Personal Laravel project',
         tech: 'Laravel, Tailwind, jQuery, MySQL',
-        source: 'https://github.com/majko96/chirper'
+        source: 'https://github.com/majko96/chirper',
+        login: 'demo@gmail.com',
+        password: '12345678'
     },
     {
         name: 'radiation-map',
@@ -81,6 +83,8 @@ export default function Portfolio(props) {
                     tech={projects.tech}
                     source={projects.source}
                     isDarkMode={props.isDarkMode}
+                    login={projects.login}
+                    password={projects.password}
                 />
             ))}
         </Box>
