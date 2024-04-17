@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "portfolio_mb",
   "private": true,
   "version": "2.0.0",
   "type": "module",
@@ -12,19 +12,8 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
+    "@types/node": "^20.12.7",
     "@vitejs/plugin-react": "^4.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

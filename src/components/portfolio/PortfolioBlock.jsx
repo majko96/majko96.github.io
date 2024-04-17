@@ -3,7 +3,6 @@ import Style from "../about/About.module.scss";
 import Terminal from "../about/Terminal";
 
 function PortfolioBlock(props) {
-    console.log(props)
     const {name, url, desc, tech, source, isDarkMode} = props;
 
     const renderSource = () => {
