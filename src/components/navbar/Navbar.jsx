@@ -3,10 +3,10 @@ import Style from './Navbar.module.scss';
 import Toggler from "./Toggler";
 import {Link, useLocation} from "react-router-dom";
 import {Box, Button, Drawer, ListItem} from "@mui/material";
-import {ReactComponent as Menu} from '../../img/Menu.svg'
-import {makeStyles} from "@mui/styles";
+import MenuSvg from '../../img/Menu.svg';
+import {styled} from "@mui/system";
 
-const useStyles = makeStyles({
+const useStyles = styled({
    paperLight: {
       borderRadius: '30px 30px 0 0',
       background: 'white',
@@ -93,7 +93,7 @@ export default function Navbar({darkMode, handleClick}) {
    return (
       <Box component={'nav'} width={'100%'}>
          <Box className={darkMode ? Style.menuIconColorDark : Style.menuIconColorLight} display={{ xs: "block", lg: "none" }} textAlign={'right'}>
-               <Button name={'menu'} onClick={toggleDrawer(true)}><Menu/></Button>
+               <Button name={'menu'} onClick={toggleDrawer(true)}><img src={MenuSvg} alt="Menu" /></Button>
                <Drawer
                    anchor={'bottom'}
                    open={state}

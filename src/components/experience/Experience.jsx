@@ -23,6 +23,20 @@ export default function Experience(props) {
                     PHP, Symfony, TypeScript, React, Redux, Bootstrap, MySQL
                 </li>
             </ul>
+            <ul className={Style.contact}>
+                <li>
+                    05.2024 - present
+                </li>
+                <li>
+                    ui42 spol. s.r.o.
+                </li>
+                <li>
+                    Full-stack developer
+                </li>
+                <li>
+                    PHP, Laravel, Bootstrap, jQuery
+                </li>
+            </ul>
         </>;
     }
 
