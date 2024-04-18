@@ -1,5 +1,5 @@
 import React from 'react';
-import Terminal from "../Terminal/Terminal";
+import Terminal from "../../components/Terminal/Terminal";
 
 function PortfolioBlock(props) {
     const {name, url, desc, tech, source, isDarkMode} = props;

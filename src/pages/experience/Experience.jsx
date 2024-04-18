@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box} from "@mui/material";
-import Terminal from "../Terminal/Terminal";
+import Terminal from "../../components/Terminal/Terminal";
 
 export default function Experience(props) {
 

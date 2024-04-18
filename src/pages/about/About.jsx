@@ -1,5 +1,5 @@
 import React from 'react';
-import Terminal from "../Terminal/Terminal";
+import Terminal from "../../components/Terminal/Terminal";
 import {Box} from "@mui/material";
 
 

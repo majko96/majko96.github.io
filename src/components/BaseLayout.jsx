@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import './BaseLayout.scss';
 import Navbar from "./navbar/Navbar";
-import Home from "./home/Home";
-import About from "./about/About";
-import Portfolio from "./portfolio/Portfolio";
+import Home from "../pages/home/Home";
+import About from "../pages/about/About";
+import Portfolio from "../pages/portfolio/Portfolio";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Box, Grid} from "@mui/material";
-import Contact from "./contact/Contact";
-import Cv from "./cv/Cv";
-import Experience from "./experience/Experience";
+import Contact from "../pages/contact/Contact";
+import Cv from "../pages/cv/Cv";
+import Experience from "../pages/experience/Experience";
 
 export default function BaseLayout(props) {
    let [darkMode, setDarkMode] = useState(props.appMode);
