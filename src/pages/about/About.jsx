@@ -9,8 +9,9 @@ export default function About(props) {
    function aboutMeText() {
       return <>
          <p>
-            Hello! I'm Mario a fullstack web developer from Povazska Bystrica.
-            I love creating web applications with React and PHP.
+            Hello! I'm Mario a fullstack web developer.
+            There is so much you can know about me but what you need to know is
+            that building web applications with React and PHP is where my passion lies.
          </p>
       </>;
    }
