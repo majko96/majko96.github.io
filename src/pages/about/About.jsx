@@ -43,8 +43,8 @@ export default function About(props) {
       return <>
          <ul className={'terminal-text'}>
             <li>💻 programming</li>
-            <li>📖 reading</li>
-            <li>🎥 movies</li>
+            <li>🏔️ hiking</li>
+            <li>🚴‍♂️ bicycle</li>
          </ul>
       </>;
    }

@@ -10,7 +10,7 @@
     margin-top: 20px;
   }
   a:hover {
-    color: $pink;
+    color: $orange;
   }
 
   .light {
@@ -27,19 +27,23 @@
     border: 1px solid $dark;
   }
 
-  i {
+.fa-circle {
     padding-left: 0.5rem;
+    :hover {
+      color: $orange;
+      transition: all 800ms;
+    }
   
     &.red {
-      color: $red;
+      color: $red !important;
     }
   
     &.amber {
-      color: $yellow;
+      color: $yellow !important;
     }
   
     &.green {
-      color: $green;
+      color: $green !important;
     }
   }
 

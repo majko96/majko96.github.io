@@ -8,7 +8,7 @@ export default function Contact(props) {
         return <>
                 <ul className={'terminal-text'}>
                 <li>
-                    👦 Mario Babinec
+                    👦🏻 Mario Babinec
                 </li>
                 <li>
                     🏠 Povazska Bystrica
@@ -17,7 +17,7 @@ export default function Contact(props) {
                     🇸🇰 Slovakia
                 </li>
                 <li>
-                    <a href="mailto:mr.babinec@gmail.com">📮 ️mr.babinec@gmail.com</a>
+                    <a href="mailto:mr.babinec@gmail.com">📮 mr.babinec@gmail.com</a>
                 </li>
                 </ul>
         </>;

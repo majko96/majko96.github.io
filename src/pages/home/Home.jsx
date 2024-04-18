@@ -2,23 +2,27 @@ import React from 'react';
 import './scss/Home.scss';
 import SocialIcon from "./SocialIcon";
 import {Box} from "@mui/material";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFacebook, faLinkedin, faGithub, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+library.add(faFacebook, faLinkedin, faGithub, faTiktok);
 
 const socials = [
    {
       link: "https://github.com/majko96",
-      icon: "fa fa-github",
+      icon: <FontAwesomeIcon icon={["fab", "github"]} />,
       label: 'Github'
    },
    {
       link: "https://sk.linkedin.com/in/mario-babinec-618221212",
-      icon: "fa fa-linkedin",
+      icon: <FontAwesomeIcon icon={["fab", "linkedin"]} />,
       label: 'LinkedIn'
    },
    {
       link: 'https://www.facebook.com/mario.babinec.9/',
-      icon: "fa fa-facebook",
+      icon: <FontAwesomeIcon icon={["fab", "facebook"]} />,
       label: 'Facebook'
-   }
+   },
 ]
 
 export default function Home() {
@@ -31,7 +35,7 @@ export default function Home() {
                <span className={'hand'}>🤚</span>
             </h1>
             <h2>I'm a fullstack web developer.</h2>
-            <Box display={'flex'} gap={'1.5rem'} justifyContent={'center'} fontSize={{xs: '2rem', md: '2.5rem'}} mt={'1rem'}>
+            <Box display={'flex'} gap={'3rem'} justifyContent={'center'} fontSize={{xs: '2rem', md: '2.5rem'}} mt={'2rem'}>
                {socials.map((social, index) => (
                   <SocialIcon key={index} link={social.link} icon={social.icon} label={social.label} />
                ))}

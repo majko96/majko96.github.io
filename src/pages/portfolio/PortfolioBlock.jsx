@@ -28,10 +28,10 @@ function PortfolioBlock(props) {
                         <a href={url} target={'_blank'} rel={'noreferrer'}>url: 🔗 {name}</a>
                     </li>
                     <li>
-                        desc: 📚 {desc}
+                        desc: 📝 {desc}
                     </li>
                     <li>
-                        tech: ✅ {tech}
+                        tech: 🖥️ {tech}
                     </li>
                     <li>
                         {renderSource()}
