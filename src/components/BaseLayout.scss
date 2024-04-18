@@ -89,3 +89,18 @@ footer {
     line-height: 1.75;
   }
 }
+
+.github-calendar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.github-calendar-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.react-activity-calendar__count {
+  text-wrap: wrap;
+}

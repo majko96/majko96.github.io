@@ -1,6 +1,7 @@
 import React from 'react';
 import Terminal from "../../components/Terminal/Terminal";
 import {Box} from "@mui/material";
+import GitHubCalendar from 'react-github-calendar';
 
 
 export default function About(props) {
@@ -47,11 +48,27 @@ export default function About(props) {
       </>;
    }
 
+   function githubActivity() {
+      return <>
+         <ul className={'terminal-text'}>
+            <li>
+            <div className="github-calendar-container">
+               <GitHubCalendar 
+                  username="majko96"
+                  colorScheme={props.isDarkMode ? 'dark' : 'light'}
+               />
+            </div>
+            </li>
+         </ul>
+      </>;
+   }
+
    return (
       <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'}>
          <Terminal text={aboutMeText()} isDarkMode={props.isDarkMode} pcText={'cat about-mario'}/>
          <Terminal text={skillsText()} isDarkMode={props.isDarkMode} pcText={'cd skills/tools && ls'}/>
          <Terminal text={miscText()} isDarkMode={props.isDarkMode} pcText={'cd hobbies && ls'}/>
+         <Terminal text={githubActivity()} isDarkMode={props.isDarkMode} pcText={'github-activity --show'}/>
       </Box>
    )
 }
