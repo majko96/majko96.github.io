@@ -39,7 +39,7 @@ export default function Experience(props) {
 
     return (
         <Box component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
-             justifyContent={'center'} minHeight={'calc(100vh - 216px)'}>
+             justifyContent={'center'} minHeight={'calc(100vh - 185px)'}>
             <Terminal text={getExperienceText()} isDarkMode={props.isDarkMode} pcText={'cat experience'}/>
         </Box>
     )
