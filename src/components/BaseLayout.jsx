@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Style from './BaseLayout.module.scss'
+import './BaseLayout.scss';
 import Navbar from "./navbar/Navbar";
 import Home from "./home/Home";
 import About from "./about/About";
@@ -20,7 +20,7 @@ export default function BaseLayout(props) {
    }
 
    return (
-      <Box className={darkMode ? Style.dark : Style.light}>
+      <Box className={darkMode ? 'dark' : 'light'}>
          <Grid container display={'block'} p={'20px'} flexDirection={'column'} minHeight={'100vh'}
                justifyContent={'space-between'}>
             <Grid item>

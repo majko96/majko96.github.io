@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box} from "@mui/material";
-import './Toggler.scss';
+import './scss/Toggler.scss';
 
 export default function Toggler({darkMode, handleClick}) {
    return (

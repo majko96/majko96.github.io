@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './Home.module.scss';
+import './scss/Home.scss';
 import SocialIcon from "./SocialIcon";
 import {Box} from "@mui/material";
 
@@ -25,10 +25,10 @@ export default function Home() {
 
    return (
       <Box component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
-           justifyContent={'center'} minHeight={'calc(100vh - 185px)'}>
+           justifyContent={'center'} minHeight={'calc(100vh - 216px)'}>
          <Box>
-            <h1>Hi, I'm <span className={Style.firstName}>Mario</span>
-               <span className={Style.hand}>🤚</span>
+            <h1>Hi, I'm <span className={'firstName'}>Mario</span>
+               <span className={'hand'}>🤚</span>
             </h1>
             <h2>I'm a fullstack web developer.</h2>
             <Box display={'flex'} gap={'1.5rem'} justifyContent={'center'} fontSize={{xs: '2rem', md: '2.5rem'}} mt={'1rem'}>

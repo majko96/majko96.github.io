@@ -1,6 +1,5 @@
 import React from 'react';
-import Style from './About.module.scss';
-import Terminal from "./Terminal";
+import Terminal from "../Terminal/Terminal";
 import {Box} from "@mui/material";
 
 
@@ -8,19 +7,16 @@ export default function About(props) {
 
    function aboutMeText() {
       return <>
-         <p><span className={Style.green}>mario@mbpc:~$</span> cat about-mario </p>
          <p>
             Hello! I'm Mario a fullstack web developer from Povazska Bystrica.
             I love creating web applications with React and PHP.
          </p>
-
       </>;
    }
 
    function skillsText() {
       return <>
-         <p><span className={Style.green}>mario@mbpc:~$</span> cd skills/tools && ls</p>
-         <ul className={Style.skills}>
+         <ul className={'skills'}>
             <li>PHP</li>
             <li>TypeScript</li>
             <li>HTML5</li>
@@ -43,8 +39,7 @@ export default function About(props) {
 
    function miscText() {
       return <>
-         <p><span className={Style.green}>mario@mbpc:~$</span> cd hobbies && ls</p>
-         <ul className={Style.contact}>
+         <ul className={'terminal-text'}>
             <li>💻 programming</li>
             <li>📖 reading</li>
             <li>🎥 movies</li>
@@ -54,9 +49,9 @@ export default function About(props) {
 
    return (
       <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'}>
-         <Terminal text={aboutMeText()} isDarkMode={props.isDarkMode}/>
-         <Terminal text={skillsText()} isDarkMode={props.isDarkMode}/>
-         <Terminal text={miscText()} isDarkMode={props.isDarkMode}/>
+         <Terminal text={aboutMeText()} isDarkMode={props.isDarkMode} pcText={'cat about-mario'}/>
+         <Terminal text={skillsText()} isDarkMode={props.isDarkMode} pcText={'cd skills/tools && ls'}/>
+         <Terminal text={miscText()} isDarkMode={props.isDarkMode} pcText={'cd hobbies && ls'}/>
       </Box>
    )
 }

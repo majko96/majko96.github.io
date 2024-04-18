@@ -1,6 +1,5 @@
 import React from 'react';
-import Style from "../about/About.module.scss";
-import Terminal from "../about/Terminal";
+import Terminal from "../Terminal/Terminal";
 
 function PortfolioBlock(props) {
     const {name, url, desc, tech, source, isDarkMode} = props;
@@ -24,8 +23,7 @@ function PortfolioBlock(props) {
     const renderItemText = () => {
         return (
             <>
-                <p><span className={Style.green}>mario@mbpc:~$</span> cat {name}</p>
-                <ul className={Style.contact}>
+                <ul className={'terminal-text'}>
                     <li>
                         <a href={url} target={'_blank'} rel={'noreferrer'}>url: 🔗 {name}</a>
                     </li>
@@ -58,7 +56,7 @@ function PortfolioBlock(props) {
     }
 
     return (
-        <Terminal text={renderItemText()} isDarkMode={isDarkMode}/>
+        <Terminal text={renderItemText()} isDarkMode={isDarkMode} pcText={'cat ' + name}/>
     )
 }
 

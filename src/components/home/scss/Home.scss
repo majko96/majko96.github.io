@@ -1,4 +1,4 @@
-@import "../../variables.modules";
+@import "../../../variables.modules";
 
 h1 {
   font-size: 3rem;
@@ -20,8 +20,10 @@ h2 {
 
 .firstName {
   background: linear-gradient(to right, #fdc830, #f37335); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; /* Safari 3.1-6 */
+  background-clip: text; /* Standard syntax */
+  -webkit-text-fill-color: transparent; /* Safari 3.1-6 */
+  color: transparent; /* Standard syntax */
 }
 
 

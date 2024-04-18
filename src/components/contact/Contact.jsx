@@ -1,15 +1,12 @@
 import React from 'react';
 import {Box} from "@mui/material";
-import Terminal from "../about/Terminal";
-import Style from "../about/About.module.scss";
-
+import Terminal from "../Terminal/Terminal";
 
 export default function Contact(props) {
 
     function contactMeText() {
         return <>
-            <p><span className={Style.green}>mario@mbpc:~$</span> cat contact</p>
-                <ul className={Style.contact}>
+                <ul className={'terminal-text'}>
                 <li>
                     👦 Mario Babinec
                 </li>
@@ -28,8 +25,8 @@ export default function Contact(props) {
 
     return (
         <Box component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
-             justifyContent={'center'} minHeight={'calc(100vh - 185px)'}>
-            <Terminal text={contactMeText()} isDarkMode={props.isDarkMode}/>
+             justifyContent={'center'} minHeight={'calc(100vh - 216px)'}>
+            <Terminal text={contactMeText()} isDarkMode={props.isDarkMode} pcText={'cat contact'}/>
         </Box>
     )
 }

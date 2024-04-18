@@ -1,15 +1,12 @@
 import React from 'react';
 import {Box} from "@mui/material";
-import Terminal from "../about/Terminal";
-import Style from "../about/About.module.scss";
-
+import Terminal from "../Terminal/Terminal";
 
 export default function Experience(props) {
 
     function getExperienceText() {
         return <>
-            <p><span className={Style.green}>mario@mbpc:~$</span> cat experience</p>
-            <ul className={Style.contact}>
+            <ul className={'terminal-text'}>
                 <li>
                     04.2021 - 11.2023
                 </li>
@@ -23,7 +20,7 @@ export default function Experience(props) {
                     PHP, Symfony, TypeScript, React, Redux, Bootstrap, MySQL
                 </li>
             </ul>
-            <ul className={Style.contact}>
+            <ul className={'terminal-text'}>
                 <li>
                     05.2024 - present
                 </li>
@@ -42,8 +39,8 @@ export default function Experience(props) {
 
     return (
         <Box component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
-             justifyContent={'center'} minHeight={'calc(100vh - 185px)'}>
-            <Terminal text={getExperienceText()} isDarkMode={props.isDarkMode}/>
+             justifyContent={'center'} minHeight={'calc(100vh - 216px)'}>
+            <Terminal text={getExperienceText()} isDarkMode={props.isDarkMode} pcText={'cat experience'}/>
         </Box>
     )
 }

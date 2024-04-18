@@ -1,0 +1,55 @@
+@import "../../../variables.modules";
+
+.terminal {
+  p, li {
+    font-size: 1rem;
+    margin: 0;
+  }
+  p, ul {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  a:hover {
+    color: $pink;
+  }
+
+  .light {
+    background-color: $white;
+    color: $dark;
+    transition: all 400ms;
+    border: 1px solid #8c8c8c;
+  }
+  
+  .dark {
+    background-color: rgb(39, 36, 47);
+    color: $white;
+    transition: all 400ms;
+    border: 1px solid $dark;
+  }
+
+  i {
+    padding-left: 0.5rem;
+  
+    &.red {
+      color: $red;
+    }
+  
+    &.amber {
+      color: $yellow;
+    }
+  
+    &.green {
+      color: $green;
+    }
+  }
+
+  .terminal-text {
+    columns: 1;
+  
+    li {
+      margin: 0;
+      line-height: 1.75;
+    }
+  }
+  
+}
