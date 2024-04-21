@@ -2,16 +2,16 @@ import React from 'react';
 import Terminal from "../../components/Terminal/Terminal";
 import {Box} from "@mui/material";
 import GitHubCalendar from 'react-github-calendar';
+import { useTranslation } from 'react-i18next';
 
 
 export default function About(props) {
+   const { t, i18n } = useTranslation();
 
    function aboutMeText() {
       return <>
          <p>
-            Hello! I'm Mario a fullstack web developer.
-            There is so much you can know about me but what you need to know is
-            that building web applications with React and PHP is where my passion lies.
+         {t('about.about-me')}
          </p>
       </>;
    }
@@ -42,9 +42,9 @@ export default function About(props) {
    function miscText() {
       return <>
          <ul className={'terminal-text'}>
-            <li>💻 programming</li>
-            <li>🏔️ hiking</li>
-            <li>🚴‍♂️ bicycle</li>
+            <li>💻 {t('programming')}</li>
+            <li>🏔️ {t('hiking')}</li>
+            <li>🚴‍♂️ {t('bicycle')}</li>
          </ul>
       </>;
    }
@@ -66,10 +66,10 @@ export default function About(props) {
 
    return (
       <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'}>
-         <Terminal text={aboutMeText()} isDarkMode={props.isDarkMode} pcText={'cat about-mario'}/>
-         <Terminal text={skillsText()} isDarkMode={props.isDarkMode} pcText={'cd skills/tools && ls'}/>
-         <Terminal text={miscText()} isDarkMode={props.isDarkMode} pcText={'cd hobbies && ls'}/>
-         <Terminal text={githubActivity()} isDarkMode={props.isDarkMode} pcText={'github-activity --show'}/>
+         <Terminal text={aboutMeText()} isDarkMode={props.isDarkMode} pcText={t('cat about-me')}/>
+         <Terminal text={skillsText()} isDarkMode={props.isDarkMode} pcText={t('cd skills/tools && ls')}/>
+         <Terminal text={miscText()} isDarkMode={props.isDarkMode} pcText={t('cd hobbies && ls')}/>
+         <Terminal text={githubActivity()} isDarkMode={props.isDarkMode} pcText={t('github-activity --show')}/>
       </Box>
    )
 }

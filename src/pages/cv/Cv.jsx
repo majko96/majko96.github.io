@@ -1,8 +1,10 @@
 import React from 'react';
 import {Box} from "@mui/material";
 import Terminal from "../../components/Terminal/Terminal";
+import { useTranslation } from 'react-i18next';
 
 export default function Cv(props) {
+    const { t, i18n } = useTranslation();
 
     function contactMeText() {
         return <>
@@ -17,7 +19,7 @@ export default function Cv(props) {
     return (
         <Box component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
              justifyContent={'center'} minHeight={'calc(100vh - 185px)'}>
-            <Terminal text={contactMeText()} isDarkMode={props.isDarkMode} pcText={'download mario-cv'}/>
+            <Terminal text={contactMeText()} isDarkMode={props.isDarkMode} pcText={t('download mario-cv')}/>
         </Box>
     )
 }

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Box, Button, Drawer, ListItem } from "@mui/material";
+import { Box, Button, Drawer, ListItem, MenuItem, Menu, IconButton } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import MenuIcon from './MenuIcon';
 import Toggler from "./Toggler";
 import { styled } from "@mui/system";
+import { useTranslation } from 'react-i18next';
 import './scss/Navbar.scss';
-
 
 const StyledDrawer = styled(({ darkMode, ...otherProps }) => <Drawer {...otherProps} />)(({ theme, darkMode }) => ({
    '& .MuiDrawer-paper': {
@@ -16,44 +16,45 @@ const StyledDrawer = styled(({ darkMode, ...otherProps }) => <Drawer {...otherPr
    }
 }));
 
-const links = [
-   {
-      name: 'Home',
-      to: '/',
-      active: 'home'
-   },
-   {
-      name: 'About Me',
-      to: '/about',
-      active: 'about'
-   },
-   {
-      name: 'Portfolio',
-      to: '/portfolio',
-      active: 'portfolio'
-   },
-   {
-      name: 'Experience',
-      to: '/experience',
-      active: 'experience'
-   },
-   {
-      name: 'CV',
-      to: '/cv',
-      active: 'cv'
-   },
-   {
-      name: 'Contact',
-      to: '/contact',
-      active: 'contact'
-   }
-]
-
 export default function Navbar({ darkMode, handleClick }) {
    const location = useLocation();
    const [active, setActive] = useState(location.pathname === '/' ? 'home' : location.pathname.slice(1, location.pathname.length));
-
    const [state, setState] = useState(false);
+   const [anchorEl, setAnchorEl] = useState(null);
+   const { t, i18n } = useTranslation();
+
+   const links = [
+      {
+         name: t('Home'),
+         to: '/',
+         active: 'home'
+      },
+      {
+         name: t('About me'),
+         to: '/about',
+         active: 'about'
+      },
+      {
+         name: t('Portfolio'),
+         to: '/portfolio',
+         active: 'portfolio'
+      },
+      {
+         name: t('Experience'),
+         to: '/experience',
+         active: 'experience'
+      },
+      {
+         name: 'CV',
+         to: '/cv',
+         active: 'cv'
+      },
+      {
+         name: t('Contact'),
+         to: '/contact',
+         active: 'contact'
+      }
+   ]
 
    const toggleDrawer = () => (event) => {
       if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -61,6 +62,20 @@ export default function Navbar({ darkMode, handleClick }) {
       }
 
       setState(!state);
+   };
+
+   const handleLanguageMenuOpen = (event) => {
+      setAnchorEl(event.currentTarget);
+   };
+
+   const handleLanguageMenuClose = () => {
+      setAnchorEl(null);
+   };
+
+   const handleLanguageChange = (lng) => {
+      localStorage.setItem('language', lng);
+      i18n.changeLanguage(lng);
+      handleLanguageMenuClose();
    };
 
    const list = () => (
@@ -81,12 +96,27 @@ export default function Navbar({ darkMode, handleClick }) {
                   </Link>
                </ListItem>
             ))}
+            <li style={{ display: 'flex', justifyContent: 'center' }}>
+                  {i18n.language !== 'en' && (
+                     <MenuItem onClick={() => handleLanguageChange('en')} 
+                        style={{ paddingBottom: '0.5rem', fontSize: '1.3rem', color: darkMode ? 'white' : '#1f1f1f' }}>
+                        {t('language.en')}
+                     </MenuItem>
+                  )}
+                  {i18n.language !== 'sk' && (
+                     <MenuItem onClick={() => handleLanguageChange('sk')} 
+                        style={{ paddingBottom: '0.5rem', fontSize: '1.3rem', color: darkMode ? 'white' : '#1f1f1f' }}>
+                        {t('language.sk')}
+                     </MenuItem>
+                  )}
+            </li>
             <ListItem style={{ display: 'flex', justifyContent: 'center' }}>
                <Toggler darkMode={darkMode} handleClick={handleClick} />
             </ListItem>
          </Box>
       </div>
    );
+
    return (
       <Box component={'nav'} width={'100%'}>
          <Box className={darkMode ? 'menuIconColorDark' : 'menuIconColorLight'} display={{ xs: "block", lg: "none" }} textAlign={'right'}>
@@ -103,7 +133,7 @@ export default function Navbar({ darkMode, handleClick }) {
             </StyledDrawer>
          </Box>
          <Box component={'ul'} display={{ xs: "none", lg: "flex" }} justifyContent={'center'} alignItems={'center'}
-            gap={{ xs: '2rem', md: '7rem' }}
+            gap={{ xs: '2rem', md: '6rem' }}
             textTransform={'lowercase'} fontSize={'1rem'}>
             {links.map((link, index) => (
                 <li className={(link.active === active && !link.image) ? 'active' : ''} key={index}>
@@ -112,6 +142,25 @@ export default function Navbar({ darkMode, handleClick }) {
                    </Link>
                 </li>
             ))}
+            <Box>
+            <li>
+               <IconButton onClick={handleLanguageMenuOpen} style={{ color: darkMode ? '#FFF' : '#1f1f1f'}}>
+                  {t(`language.${i18n.language}`)}
+               </IconButton>
+               <Menu
+                  anchorEl={anchorEl}
+                  open={Boolean(anchorEl)}
+                  onClose={handleLanguageMenuClose}
+               >
+                  {i18n.language !== 'en' && (
+                     <MenuItem onClick={() => handleLanguageChange('en')}>{t('language.en')}</MenuItem>
+                  )}
+                  {i18n.language !== 'sk' && (
+                     <MenuItem onClick={() => handleLanguageChange('sk')}>{t('language.sk')}</MenuItem>
+                  )}
+               </Menu>
+            </li>
+         </Box>
             <li>
                <Toggler darkMode={darkMode} handleClick={handleClick} />
             </li>
