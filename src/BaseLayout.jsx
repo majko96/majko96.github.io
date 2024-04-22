@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import './BaseLayout.scss';
-import Navbar from "./navbar/Navbar";
-import Home from "../pages/home/Home";
-import About from "../pages/about/About";
-import Portfolio from "../pages/portfolio/Portfolio";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Portfolio from "./pages/portfolio/Portfolio";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Box, Grid} from "@mui/material";
-import Contact from "../pages/contact/Contact";
-import Cv from "../pages/cv/Cv";
-import Experience from "../pages/experience/Experience";
+import Contact from "./pages/contact/Contact";
+import Cv from "./pages/cv/Cv";
+import Experience from "./pages/experience/Experience";
 import { useTranslation } from 'react-i18next';
 
 export default function BaseLayout(props) {
@@ -37,7 +37,6 @@ export default function BaseLayout(props) {
                   <Route exact path={'/experience'} element={<Experience isDarkMode={darkMode}/>}/>
                   <Route exact path={'/cv'} element={<Cv isDarkMode={darkMode}/>}/>
                   <Route exact path={'/contact'} element={<Contact isDarkMode={darkMode}/>}/>
-                  <Route path={'*'} element={<Navigate to={'/'}/>}/>
                </Routes>
             </Grid>
             <Grid item>

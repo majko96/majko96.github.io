@@ -85,31 +85,29 @@ export default function Navbar({ darkMode, handleClick }) {
          onKeyDown={toggleDrawer(false)}
       >
          <Box textAlign={'center'} p={'1rem'} textTransform={'lowercase'}>
-            {links.map((link, index) => (
-               <ListItem
-                  key={index}
-                  className={(link.active === active && !link.image) ? 'active' : ''}
-                  style={{ display: 'flex', justifyContent: 'center' }}
-               >
-                  <Link to={link.to} onClick={() => setActive(link.active)}>
-                        {link.name && <p style={{ paddingBottom: '0.5rem', fontSize: '1.3rem', color: darkMode ? 'white' : '#1f1f1f' }}>{link.name}</p>}
-                  </Link>
-               </ListItem>
-            ))}
-            <li style={{ display: 'flex', justifyContent: 'center' }}>
+            <ul style={{ listStyleType: 'none', padding: 0 }}>
+               {links.map((link, index) => (
+                  <li key={index} className={(link.active === active) ? 'active' : ''} style={{ display: 'flex', justifyContent: 'center' }}>
+                     <Link to={link.to} onClick={() => setActive(link.active)}>
+                        {link.name && <p style={{ paddingBottom: '1rem', fontSize: '1.5rem', color: darkMode ? 'white' : '#1f1f1f' }}>{link.name}</p>}
+                     </Link>
+                  </li>
+               ))}
+               <li style={{ display: 'flex', justifyContent: 'center' }}>
                   {i18n.language !== 'en' && (
-                     <MenuItem onClick={() => handleLanguageChange('en')} 
-                        style={{ paddingBottom: '0.5rem', fontSize: '1.3rem', color: darkMode ? 'white' : '#1f1f1f' }}>
-                        {t('language.en')}
-                     </MenuItem>
+                     <p style={{ paddingBottom: '1rem', fontSize: '1.5rem', color: darkMode ? 'white' : '#1f1f1f' }}>
+                        <span onClick={() => handleLanguageChange('en')} style={{ cursor: 'pointer' }}>{t('language.en')}</span>
+                     </p>
                   )}
+               </li>
+               <li style={{ display: 'flex', justifyContent: 'center' }}>
                   {i18n.language !== 'sk' && (
-                     <MenuItem onClick={() => handleLanguageChange('sk')} 
-                        style={{ paddingBottom: '0.5rem', fontSize: '1.3rem', color: darkMode ? 'white' : '#1f1f1f' }}>
-                        {t('language.sk')}
-                     </MenuItem>
+                     <p style={{ paddingBottom: '1rem', fontSize: '1.5rem', color: darkMode ? 'white' : '#1f1f1f' }}>
+                        <span onClick={() => handleLanguageChange('sk')} style={{ cursor: 'pointer' }}>{t('language.sk')}</span>
+                     </p>
                   )}
-            </li>
+               </li>
+            </ul>
             <ListItem style={{ display: 'flex', justifyContent: 'center' }}>
                <Toggler darkMode={darkMode} handleClick={handleClick} />
             </ListItem>
@@ -136,7 +134,7 @@ export default function Navbar({ darkMode, handleClick }) {
             gap={{ xs: '2rem', md: '6rem' }}
             textTransform={'lowercase'} fontSize={'1rem'}>
             {links.map((link, index) => (
-                <li className={(link.active === active && !link.image) ? 'active' : ''} key={index}>
+                <li className={(link.active === active) ? 'active' : ''} key={index}>
                    <Link aria-label={'home page'} to={link.to} onClick={() => setActive(link.active)}>
                       {link.name && <p style={{paddingBottom: '0.5rem'}}>{link.name}</p>}
                    </Link>

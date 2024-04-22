@@ -1,5 +1,5 @@
 import React from 'react';
-import Terminal from "../../components/Terminal/Terminal";
+import Terminal from "../terminal/Terminal";
 import { useTranslation } from 'react-i18next';
 
 function PortfolioBlock(props) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box} from "@mui/material";
-import Terminal from "../../components/Terminal/Terminal";
+import Terminal from "../../components/terminal/Terminal";
 import { useTranslation } from 'react-i18next';
 
 export default function Contact(props) {

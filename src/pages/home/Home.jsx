@@ -1,6 +1,6 @@
 import React from 'react';
 import './scss/Home.scss';
-import SocialIcon from "./SocialIcon";
+import SocialIcon from "../../components/socialIcon/SocialIcon";
 import {Box} from "@mui/material";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebook, faLinkedin, faGithub, faTiktok } from '@fortawesome/free-brands-svg-icons';

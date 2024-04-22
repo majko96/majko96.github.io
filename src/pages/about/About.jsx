@@ -1,5 +1,5 @@
 import React from 'react';
-import Terminal from "../../components/Terminal/Terminal";
+import Terminal from "../../components/terminal/Terminal";
 import {Box} from "@mui/material";
 import GitHubCalendar from 'react-github-calendar';
 import { useTranslation } from 'react-i18next';
