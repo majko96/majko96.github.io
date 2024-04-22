@@ -37,6 +37,7 @@ export default function BaseLayout(props) {
                   <Route exact path={'/experience'} element={<Experience isDarkMode={darkMode}/>}/>
                   <Route exact path={'/cv'} element={<Cv isDarkMode={darkMode}/>}/>
                   <Route exact path={'/contact'} element={<Contact isDarkMode={darkMode}/>}/>
+                  <Route path={'*'} element={<Navigate to={'/'}/>}/>
                </Routes>
             </Grid>
             <Grid item>
