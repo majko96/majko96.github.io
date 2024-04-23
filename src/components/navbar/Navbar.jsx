@@ -131,7 +131,7 @@ export default function Navbar({ darkMode, handleClick }) {
             </StyledDrawer>
          </Box>
          <Box component={'ul'} display={{ xs: "none", lg: "flex" }} justifyContent={'center'} alignItems={'center'}
-            gap={{ xs: '2rem', md: '6rem' }}
+            gap={{ xs: '2rem', lg: '5rem', xl: '6rem' }}
             textTransform={'lowercase'} fontSize={'1rem'}>
             {links.map((link, index) => (
                 <li className={(link.active === active) ? 'active' : ''} key={index}>
