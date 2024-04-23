@@ -142,7 +142,7 @@ export default function Navbar({ darkMode, handleClick }) {
             ))}
             <Box>
             <li>
-               <IconButton onClick={handleLanguageMenuOpen} style={{ color: darkMode ? '#FFF' : '#1f1f1f'}}>
+               <IconButton onClick={handleLanguageMenuOpen} style={{ color: darkMode ? '#FFF' : '#1f1f1f', fontSize: '1.3rem'}}>
                   {t(`language.${i18n.language}`)}
                </IconButton>
                <Menu
