@@ -45,7 +45,7 @@ export default function BaseLayout(props) {
                     py={'1.5rem'} sx={{opacity: 0.7}} width={'100%'}>
                   <p>{t('footer.text')}</p>
                   <a href="https://github.com/majko96/majko96.github.io" target='_blank'>{t('source code')}</a>
-                  <p>&copy;Mba 2020 - {actualYear}</p>
+                  <p>&copy;MBa 2020 - {actualYear}</p>
                </Box>
             </Grid>
          </Grid>

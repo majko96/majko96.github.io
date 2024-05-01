@@ -19,32 +19,30 @@ export default function About(props) {
    function skillsText() {
       return <>
          <ul className={'skills'}>
-            <li>PHP</li>
-            <li>TypeScript</li>
             <li>HTML5</li>
             <li>CSS3</li>
-            <li>React</li>
+            <li>SCSS</li>
+            <li>PHP</li>
             <li>Symfony</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>jQuery</li>
+            <li>React</li>
             <li>Bootstrap</li>
             <li>Material UI</li>
-            <li>Sass</li>
-            <li>Scss Modules</li>
             <li>Git</li>
-            <li>Github</li>
             <li>npm</li>
             <li>composer</li>
-            <li>API Requests</li>
-            <li>JSON</li>
          </ul>
       </>;
    }
 
    function miscText() {
       return <>
-         <ul className={'terminal-text'}>
+      <ul className={'terminal-text'}>
             <li>💻 {t('programming')}</li>
             <li>🏔️ {t('hiking')}</li>
-            <li>🚴‍♂️ {t('bicycle')}</li>
+            <li>🚴‍♂️ {t('cycling')}</li>
          </ul>
       </>;
    }
