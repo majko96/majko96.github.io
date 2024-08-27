@@ -11,13 +11,12 @@ const projects = [
         source: 'https://github.com/majko96/interstol.sk'
     },
     {
-        name: 'whack-it!',
-        url: 'https://whackit.eu',
-        desc: 'Personal Laravel project',
-        tech: 'Laravel, Tailwind, jQuery, MySQL',
-        source: 'https://github.com/majko96/chirper',
-        login: 'demo@gmail.com',
-        password: '12345678'
+        name: 'abcommunity.eu',
+        url: 'https://abcommunity.eu',
+        desc: 'Frontend SPA app',
+        tech: 'React PWA, Bootstrap',
+        source: null,
+        login: 'PM',
     },
     {
         name: 'radiation-map',
