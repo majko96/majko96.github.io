@@ -1,11 +1,12 @@
 import React from 'react';
 import './scss/Home.scss';
-import SocialIcon from "./SocialIcon";
+import SocialIcon from "../../components/socialIcon/SocialIcon";
 import {Box} from "@mui/material";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebook, faLinkedin, faGithub, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 library.add(faFacebook, faLinkedin, faGithub, faTiktok);
+import { useTranslation } from 'react-i18next';
 
 const socials = [
    {
@@ -26,15 +27,16 @@ const socials = [
 ]
 
 export default function Home() {
+   const { t, i18n } = useTranslation();
 
    return (
       <Box component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
            justifyContent={'center'} minHeight={'calc(100vh - 185px)'}>
          <Box>
-            <h1>Hi, I'm <span className={'firstName'}>Mario</span>
+            <h1>{t('home.first')} <span className={'firstName'}>{t('home.mario')}</span>
                <span className={'hand'}>🤚</span>
             </h1>
-            <h2>I'm a fullstack web developer.</h2>
+            <h2>{t('home.last')}</h2>
             <Box display={'flex'} gap={'3rem'} justifyContent={'center'} fontSize={{xs: '2rem', md: '2.5rem'}} mt={'2rem'}>
                {socials.map((social, index) => (
                   <SocialIcon key={index} link={social.link} icon={social.icon} label={social.label} />

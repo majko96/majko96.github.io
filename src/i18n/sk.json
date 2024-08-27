@@ -1,0 +1,52 @@
+{
+    "Home": "Domov",
+    "About me": "O mne",
+    "Portfolio": "Portfólio",
+    "Experience": "Skúsenosti",
+    "Contact": "Kontakt",
+    "language": {
+        "en": "en",
+        "sk": "sk"
+    },
+    "footer": {
+        "text": "Keď som písal tento kód, iba Boh a ja sme mu rozumeli. Teraz mu už nerozumie nikto."
+    },
+    "home": {
+        "first": "Ahoj, som",
+        "mario": "Mário",
+        "last": "Fullstack web developer."
+    },
+    "about": {
+        "about-me": "Ahoj! Ja som Mário a som fullstack web developer. Je veľa vecí, ktoré by ste sa o mne mohli dozvedieť, ale to dôležité je, že rád tvorím webové aplikácie pomocou technológii React a PHP."
+    },
+    "contact": {
+        "name": "Mário Babinec",
+        "city": "Považská Bystrica",
+        "country": "Slovensko"
+    },
+    "cat about-me": "cat o-mne",
+    "cat contact": "cat kontaktne-informacie",
+    "cat experience": "cat skusenosti",
+    "download mario-cv": "stiahnut mario-cv",
+    "cd skills/tools && ls": "cd zrucnosti/nastroje && ls",
+    "cd hobbies && ls": "cd zaluby && ls",
+    "github-activity --show": "github-aktivita --zobraz",
+    "programming": "programovanie",
+    "cycling" : "bicyklovanie",
+    "hiking": "turistika",
+    "source": "zdroj",
+    "desc": "popis",
+    "login": "meno",
+    "password": "heslo",
+    "present": "súčasnosť",
+    "source code": "zdrojový kód",
+    "Carpentry website" : "Webová stránka pre stolárstvo",
+    "Personal Laravel project": "Osobný Laravel projekt",
+    "Simple React app which show actual radiation data": "Jednoduchá aplikácia v React-e, ktorá zobrazuje aktuálne údaje o žiarení na SLovensku",
+    "Admin panel for management radio stations list for my KODI app": "Admin panel na správu rádiových staníc pre KODI aplikáciu",
+    "Learn Perl basics": "Projekt slúžiaci na naučenie základov programovacieho jazyka Perl",
+    "Learn Python basics": "Projekt slúžiaci na naučenie základov programovacieho jazyka Python",
+    "Landing page": "Landing page pre elektrikársku firmu",
+    "Learn PHP and MySQL": "Projekt slúžiaci na naučenie základov programovacie jazyka PHP a MySQL",
+    "Learn Android development basics": "Projekt slúžiaci na naučenie základov programovacie jazyka Java"
+}

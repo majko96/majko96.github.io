@@ -1,8 +1,10 @@
 import React from 'react';
 import {Box} from "@mui/material";
-import Terminal from "../../components/Terminal/Terminal";
+import Terminal from "../../components/terminal/Terminal";
+import { useTranslation } from 'react-i18next';
 
 export default function Experience(props) {
+    const { t, i18n } = useTranslation();
 
     function getExperienceText() {
         return <>
@@ -22,7 +24,7 @@ export default function Experience(props) {
             </ul>
             <ul className={'terminal-text'}>
                 <li>
-                    05.2024 - present
+                    05.2024 - {t('present')}
                 </li>
                 <li>
                     ui42 spol. s.r.o.
@@ -40,7 +42,7 @@ export default function Experience(props) {
     return (
         <Box component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
              justifyContent={'center'} minHeight={'calc(100vh - 185px)'}>
-            <Terminal text={getExperienceText()} isDarkMode={props.isDarkMode} pcText={'cat experience'}/>
+            <Terminal text={getExperienceText()} isDarkMode={props.isDarkMode} pcText={t('cat experience')}/>
         </Box>
     )
 }

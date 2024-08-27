@@ -1,18 +1,21 @@
 import React, {useState} from 'react';
 import './BaseLayout.scss';
-import Navbar from "./navbar/Navbar";
-import Home from "../pages/home/Home";
-import About from "../pages/about/About";
-import Portfolio from "../pages/portfolio/Portfolio";
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Portfolio from "./pages/portfolio/Portfolio";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Box, Grid} from "@mui/material";
-import Contact from "../pages/contact/Contact";
-import Cv from "../pages/cv/Cv";
-import Experience from "../pages/experience/Experience";
+import Contact from "./pages/contact/Contact";
+import Cv from "./pages/cv/Cv";
+import Experience from "./pages/experience/Experience";
+import { useTranslation } from 'react-i18next';
 
 export default function BaseLayout(props) {
    let [darkMode, setDarkMode] = useState(props.appMode);
    const actualYear = new Date().getFullYear();
+   const { t, i18n } = useTranslation();
+
 
    function handleClick() {
       setDarkMode(!darkMode);
@@ -40,8 +43,9 @@ export default function BaseLayout(props) {
             <Grid item>
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'} textAlign={'center'}
                     py={'1.5rem'} sx={{opacity: 0.7}} width={'100%'}>
-                  <p>When I wrote this code, only God and I understood what I did. Now only God knows.</p>
-                  <p>&copy; 2020 - {actualYear}</p>
+                  <p>{t('footer.text')}</p>
+                  <a href="https://github.com/majko96/majko96.github.io" target='_blank'>{t('source code')}</a>
+                  <p>&copy;MBa 2020 - {actualYear}</p>
                </Box>
             </Grid>
          </Grid>

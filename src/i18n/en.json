@@ -1,0 +1,48 @@
+{
+    "Home": "Home",
+    "language": {
+        "en": "en",
+        "sk": "sk"
+    },
+    "footer": {
+        "text": "When I wrote this code, only God and I understood what I did. Now nobody knows."
+    },
+    "home": {
+        "first": "Hi, I'm",
+        "mario": "Mario",
+        "last": "I'm a fullstack web developer."
+    },
+    "about": {
+        "about-me": "Hello! I'm Mario a fullstack web developer. There is so much you can know about me but what you need to know is that building web applications with React and PHP is where my passion lies."
+    },
+    "contact": {
+        "name": "Mario Babinec",
+        "city": "Povazska Bystrica",
+        "country": "Slovakia"
+    },
+    "cat about-me": "cat about-me",
+    "cat contact": "cat contact",
+    "cat experience": "cat experience",
+    "cd skills/tools && ls": "cd skills/tools && ls",
+    "cd hobbies && ls": "cd hobbies && ls",
+    "github-activity --show": "github-activity --show",
+    "download mario-cv": "download mario-cv",
+    "programming": "programming",
+    "cycling" : "cycling",
+    "hiking": "hiking",
+    "source": "source",
+    "desc": "desc",
+    "login": "login",
+    "password": "password",
+    "present": "present",
+    "source code": "source code",
+    "Carpentry website" : "Carpentry website",
+    "Personal Laravel project": "Personal Laravel project",
+    "Simple React app which show actual radiation data": "Simple React app which show actual radiation data",
+    "Admin panel for management radio stations list for my KODI app": "Admin panel for management radio stations list for my KODI app",
+    "Learn Perl basics": "Learn Perl basics",
+    "Learn Python basics": "Learn Python basics",
+    "Landing page": "Landing page",
+    "Learn PHP and MySQL": "Learn PHP and MySQL",
+    "Learn Android development basics": "Learn Android development basics"
+}
