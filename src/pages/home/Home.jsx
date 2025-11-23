@@ -12,18 +12,21 @@ const socials = [
    {
       link: "https://github.com/majko96",
       icon: <FontAwesomeIcon icon={["fab", "github"]} />,
-      label: 'Github'
-   },
-   {
-      link: "https://sk.linkedin.com/in/mario-babinec-618221212",
-      icon: <FontAwesomeIcon icon={["fab", "linkedin"]} />,
-      label: 'LinkedIn'
+      label: 'Github',
+      disabled: false,
    },
    {
       link: 'https://www.facebook.com/mario.babinec.9/',
       icon: <FontAwesomeIcon icon={["fab", "facebook"]} />,
-      label: 'Facebook'
+      label: 'Facebook',
+      disabled: false,
    },
+    {
+        link: "https://sk.linkedin.com/in/mario-babinec-618221212",
+        icon: <FontAwesomeIcon icon={["fab", "linkedin"]} />,
+        label: 'LinkedIn',
+        disabled: true,
+    },
 ]
 
 export default function Home() {
@@ -39,7 +42,13 @@ export default function Home() {
             <h2>{t('home.last')}</h2>
             <Box display={'flex'} gap={'3rem'} justifyContent={'center'} fontSize={{xs: '2rem', md: '2.5rem'}} mt={'2rem'}>
                {socials.map((social, index) => (
-                  <SocialIcon key={index} link={social.link} icon={social.icon} label={social.label} />
+                  <SocialIcon
+                      key={index}
+                      link={social.link}
+                      icon={social.icon}
+                      label={social.label}
+                      disabled={social.disabled}
+                  />
                ))}
             </Box>
          </Box>

@@ -10,7 +10,7 @@ export default function Experience(props) {
         return <>
             <ul className={'terminal-text'}>
                 <li>
-                    04.2021 - 11.2023
+                    2020 - 2023
                 </li>
                 <li>
                     United Classifieds s.r.o.
@@ -19,21 +19,21 @@ export default function Experience(props) {
                     Full-stack developer
                 </li>
                 <li>
-                    PHP, Symfony, TypeScript, React, Redux, Bootstrap, MySQL
+                    PHP, Symfony, TypeScript, React, Bootstrap, MySQL
                 </li>
             </ul>
             <ul className={'terminal-text'}>
                 <li>
-                    05.2024 - {t('present')}
+                    2024 - {t('present')}
                 </li>
                 <li>
-                    ui42 spol. s.r.o.
+                    Freelance
                 </li>
                 <li>
                     Full-stack developer
                 </li>
                 <li>
-                    PHP, Laravel, Bootstrap, jQuery
+                    PHP, Laravel, React, Vue.js, Bootstrap, MySQL
                 </li>
             </ul>
         </>;

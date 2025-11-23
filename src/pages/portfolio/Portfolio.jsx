@@ -58,13 +58,6 @@ const projects = [
         source: null
     },
     {
-        name: 'moj-dennik.eu',
-        url: 'https://moj-dennik.eu',
-        desc: 'Learn PHP and MySQL',
-        tech: 'PHP, javaScript, Bootstrap, jQuery, MySQL',
-        source: null
-    },
-    {
         name: 'Covid-19-SK-android-app',
         url: 'https://github.com/majko96/covid-19-sk/releases/download/6.0/app-debug.apk',
         desc: 'Learn Android development basics',
