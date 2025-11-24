@@ -35,7 +35,7 @@ export default function Home() {
    return (
       <Box component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
            justifyContent={'center'} minHeight={'calc(100vh - 185px)'}>
-         <Box>
+         <Box zIndex={2} >
             <h1>{t('home.first')} <span className={'firstName'}>{t('home.mario')}</span>
                <span className={'hand'}>🤚</span>
             </h1>

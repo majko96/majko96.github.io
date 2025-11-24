@@ -11,7 +11,7 @@ function Terminal(props) {
 
    return (
       <Box component={'section'} className={terminalClass}
-           width={{xs: '95%', md: '50%'}} borderRadius={'0.5rem'} mb={'4rem'}>
+           width={{xs: '95%', md: '50%'}} borderRadius={'0.5rem'} mb={'4rem'} zIndex={2}>
          <Box sx={{backgroundColor: '#8c8c8c'}} p={'0.5rem'} borderRadius={'0.5rem 0.5rem 0 0'}
               fontSize={'1rem'}>
             <FontAwesomeIcon icon={faCircle} className="red" />

@@ -10,6 +10,7 @@ import Contact from "./pages/contact/Contact";
 import Cv from "./pages/cv/Cv";
 import Experience from "./pages/experience/Experience";
 import { useTranslation } from 'react-i18next';
+import Snowfall from 'react-snowfall';
 
 export default function BaseLayout(props) {
    let [darkMode, setDarkMode] = useState(props.appMode);
@@ -23,7 +24,12 @@ export default function BaseLayout(props) {
    }
 
    return (
-      <Box className={darkMode ? 'dark' : 'light'}>
+      <Box className={darkMode ? 'dark' : 'light'} position="relative">
+          <Snowfall
+              snowflakeCount={100}
+              color="#CFCFCF"
+              style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}
+          />
          <Grid container display={'block'} p={'20px'} flexDirection={'column'} minHeight={'100vh'}
                justifyContent={'space-between'}>
             <Grid item>
@@ -41,8 +47,16 @@ export default function BaseLayout(props) {
                </Routes>
             </Grid>
             <Grid item>
-               <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'} textAlign={'center'}
-                    py={'1.5rem'} sx={{opacity: 0.7}} width={'100%'}>
+               <Box
+                   component={'footer'}
+                   display={'flex'}
+                   flexDirection={'column'}
+                   alignItems={'center'}
+                   textAlign={'center'}
+                   py={'1.5rem'}
+                   sx={{opacity: 0.7}}
+                   width={'100%'}
+               >
                   <p>{t('footer.text')}</p>
                   <a href="https://github.com/majko96/majko96.github.io" target='_blank'>{t('source code')}</a>
                   <p>&copy;MBa 2020 - {actualYear}</p>
