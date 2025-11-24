@@ -10,7 +10,7 @@ import Contact from "./pages/contact/Contact";
 import Cv from "./pages/cv/Cv";
 import Experience from "./pages/experience/Experience";
 import { useTranslation } from 'react-i18next';
-import Snowfall from 'react-snowfall';
+import SnowComponent from "./components/base/SnowComponent";
 
 export default function BaseLayout(props) {
    let [darkMode, setDarkMode] = useState(props.appMode);
@@ -25,11 +25,9 @@ export default function BaseLayout(props) {
 
    return (
       <Box className={darkMode ? 'dark' : 'light'} position="relative">
-          <Snowfall
-              snowflakeCount={100}
-              color="#CFCFCF"
-              style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}
-          />
+          {darkMode &&
+              <SnowComponent snow={!!darkMode} />
+          }
          <Grid container display={'block'} p={'20px'} flexDirection={'column'} minHeight={'100vh'}
                justifyContent={'space-between'}>
             <Grid item>
